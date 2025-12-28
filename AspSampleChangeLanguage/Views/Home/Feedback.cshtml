@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@inject IViewLocalizer Localizer;
+@model FeedbackViewModel
+
+<div class="row justify-content-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+
+    <form asp-action="Feedback" class="modal-body small">
+        <div class="mb-3">
+            <label asp-for="@Model.Name" class="form-label"></label><br />
+            <input asp-for="@Model.Name" required class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.Feedback" class="form-label"></label><br />
+            <textarea asp-for="@Model.Feedback" required class="form-control" rows="3"></textarea>
+        </div>
+        <div class="d-grid mb-3">
+            <input type="submit" class="btn btn-primary" />
+        </div>
+    </form>
+</div>

@@ -29,6 +29,13 @@ namespace AspSampleChangeLanguage.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Feedback()
+        {
+            ViewData["Title"] = _localizer["PageFeedback"];
+            return View(new FeedbackViewModel());
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

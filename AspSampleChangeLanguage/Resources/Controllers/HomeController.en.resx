@@ -120,4 +120,7 @@
   <data name="MsgWelcome" xml:space="preserve">
     <value>Welcome!</value>
   </data>
+  <data name="PageFeedback" xml:space="preserve">
+    <value>Leave feedback</value>
+  </data>
 </root>
