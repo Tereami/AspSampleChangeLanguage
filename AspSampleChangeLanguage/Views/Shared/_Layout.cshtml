@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using System.Globalization;
+@{
+    string currentCulture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -29,7 +34,8 @@
                             <a class="nav-link text-dark" asp-controller="Culture"
                                asp-action="SetLanguage"
                                asp-route-culture="ru"
-                               asp-route-returnUrl="@Context.Request.Path">
+                               asp-route-returnUrl="@Context.Request.Path"
+                               style="@(currentCulture == "ru" ? "font-weight:bold;" : "")">
                                 RUS
                             </a>
                         </li>
@@ -37,7 +43,8 @@
                             <a class="nav-link text-dark" asp-controller="Culture"
                                asp-action="SetLanguage"
                                asp-route-culture="en"
-                               asp-route-returnUrl="@Context.Request.Path">
+                               asp-route-returnUrl="@Context.Request.Path"
+                               style="@(currentCulture == "en" ? "font-weight:bold;" : "")">
                                 ENG
                             </a>
                         </li>
