@@ -1,5 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
 @inject IViewLocalizer Localizer;
+@inject IStringLocalizer<SharedResource> Shared;
 @model FeedbackViewModel
 
 <div class="row justify-content-center">
@@ -15,7 +17,7 @@
             <textarea asp-for="@Model.Feedback" required class="form-control" rows="3"></textarea>
         </div>
         <div class="d-grid mb-3">
-            <input type="submit" class="btn btn-primary" />
+            <input type="submit" class="btn btn-primary" value="@Shared["ButtonSubmit"]" />
         </div>
     </form>
 </div>
